@@ -1,7 +1,7 @@
-import 'package:DW/src/app.dart';
-import 'package:DW/src/widgets/video_tile.dart';
+import 'package:TMMA/src/app.dart';
+import 'package:TMMA/src/widgets/video_tile.dart';
 import 'package:flutter/material.dart';
-import 'package:DW/src/blocs/videos_provider.dart';
+import 'package:TMMA/src/blocs/videos_provider.dart';
 
 class NewsVideos extends StatelessWidget {
   final String id;

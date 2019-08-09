@@ -1,13 +1,13 @@
-import 'package:DW/src/models/Video.dart';
-import 'package:DW/src/pages/videos/play_video.dart';
+import 'package:TMMA/src/pages/business_posts.dart';
+import 'package:TMMA/src/models/Video.dart';
+import 'package:TMMA/src/pages/videos/play_video.dart';
 import 'package:flutter/material.dart';
-import 'package:DW/src/localization/localizations.dart';
+import 'package:TMMA/src/localization/localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 // import 'package:flutter_cupertino_localizations/flutter_cupertino_localizations.dart';
-
-import 'package:DW/src/pages/post_detail.dart';
-import 'package:DW/src/models/Post.dart';
-import 'package:DW/src/home.dart';
+import 'package:TMMA/src/pages/post_detail.dart';
+import 'package:TMMA/src/models/Post.dart';
+import 'package:TMMA/src/home.dart';
 
 class HomeInherited extends InheritedWidget {
   HomeInherited({Key key, @required Widget child, @required this.data})
@@ -34,12 +34,9 @@ class Home extends StatefulWidget {
   }
 }
 
-class HomeState extends State<Home> with AutomaticKeepAliveClientMixin {
+class HomeState extends State<Home> {
   String _locale = 'en';
   int _number_tabs = 5;
-
-  @override
-  bool get wantKeepAlive => true;
 
   changeNumberOfTabs(int tabs) {
     setState(() {
@@ -56,13 +53,13 @@ class HomeState extends State<Home> with AutomaticKeepAliveClientMixin {
   String get lang => _locale;
   @override
   Widget build(BuildContext context) {
-    super.build(context);
     return new MaterialApp(
+      initialRoute: '/',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
-        primaryColor: const Color(0xff8f0924),
-        accentColor: const Color(0xff8f0924),
+        primaryColor: const Color(0xff4168b5),
+        accentColor: const Color(0xff4168b5),
       ),
       locale: Locale(_locale),
       supportedLocales: [const Locale('fr', 'FR'), const Locale('en', 'US')],
@@ -87,38 +84,49 @@ class HomeState extends State<Home> with AutomaticKeepAliveClientMixin {
         return supportedLocales.first;
       },
       onGenerateRoute: routes,
-      home: DefaultTabController(
-        length: _number_tabs,
-        child: new HomeInherited(
-          data: this,
-          child: new HomePage(
-            onChangeLanguage,
-          ),
+      home: new HomeInherited(
+        data: this,
+        child: new HomePage(
+          onChangeLanguage,
         ),
       ),
     );
   }
 
   Route routes(RouteSettings settings) {
-    if (settings.name == "/postDetail") {
-      Post post;
+    switch (settings.name) {
+      case "/postDetail":
+        {
+          Post post;
 
-      if (settings.arguments != null) {
-        post = settings.arguments;
-      }
-      return MaterialPageRoute(
-        builder: (context) {
-          return PostDetail(post, _locale);
-        },
-      );
-    } else if (settings.name == "/play") {
-      Video source;
-      if (settings.arguments != null) {
-        source = settings.arguments;
-      }
-      return MaterialPageRoute(builder: (context) {
-        return PlayVideo(source);
-      });
+          if (settings.arguments != null) {
+            post = settings.arguments;
+          }
+          return MaterialPageRoute(
+            builder: (context) {
+              return PostDetail(post, _locale);
+            },
+          );
+        }
+      case "/play":
+        {
+          Video source;
+          if (settings.arguments != null) {
+            source = settings.arguments;
+          }
+          return MaterialPageRoute(builder: (context) {
+            return PlayVideo(source);
+          });
+        }
+      case "/business":
+        {
+          return MaterialPageRoute(
+            maintainState: false,
+            builder: (context) {
+              return new BusinessPosts();
+            },
+          );
+        }
     }
   }
 }

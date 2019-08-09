@@ -1,8 +1,8 @@
-import 'package:DW/src/app.dart';
+import 'package:TMMA/src/app.dart';
 import 'package:flutter/material.dart';
-import 'package:DW/src/widgets/post_slide.dart';
-import 'package:DW/src/blocs/posts_provider.dart';
-import 'package:DW/src/widgets/slides_loading.dart';
+import 'package:TMMA/src/widgets/post_slide.dart';
+import 'package:TMMA/src/blocs/posts_provider.dart';
+import 'package:TMMA/src/widgets/slides_loading.dart';
 
 class PostSlides extends StatelessWidget {
   final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =

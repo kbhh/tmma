@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:DW/src/blocs/posts_provider.dart';
-import 'package:DW/src/widgets/post_list.dart';
-import 'package:DW/src/widgets/post_slides.dart';
-import "package:DW/src/app.dart";
+import 'package:TMMA/src/blocs/posts_provider.dart';
+import 'package:TMMA/src/widgets/post_list.dart';
+import 'package:TMMA/src/widgets/post_slides.dart';
+import "package:TMMA/src/app.dart";
 
 class HomePosts extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -20,7 +20,6 @@ class HomePosts extends StatelessWidget {
           child: Container(
             child: Flex(
               children: <Widget>[
-                PostsProvider(child: PostSlides()),
                 PostsProvider(child: PostList(cats)),
               ],
               direction: Axis.vertical,

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:DW/src/models/Post.dart';
+import 'package:TMMA/src/models/Post.dart';
 import 'package:http/http.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path_provider/path_provider.dart';

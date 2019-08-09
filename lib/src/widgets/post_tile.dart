@@ -1,5 +1,5 @@
-import 'package:DW/src/app.dart';
-import 'package:DW/src/resources/favorites_db_provider.dart';
+import 'package:TMMA/src/app.dart';
+import 'package:TMMA/src/resources/favorites_db_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../models/Post.dart';
@@ -104,7 +104,7 @@ class PostTileState extends State<PostTile> {
                     ? Icon(
                         Icons.bookmark,
                         size: 25.0,
-                        color: const Color(0xff8f0924),
+                        color: const Color(0xff4168b5),
                       )
                     : Icon(
                         Icons.bookmark_border,

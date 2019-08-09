@@ -1,8 +1,8 @@
-import 'package:DW/src/app.dart';
-import 'package:DW/src/resources/favorites_db_provider.dart';
+import 'package:TMMA/src/app.dart';
+import 'package:TMMA/src/resources/favorites_db_provider.dart';
 import 'package:flutter/material.dart';
 
-import 'package:DW/src/models/Post.dart';
+import 'package:TMMA/src/models/Post.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 class FavoritesList extends StatelessWidget {

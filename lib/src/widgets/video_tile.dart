@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:DW/src/models/Video.dart';
+import 'package:TMMA/src/models/Video.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

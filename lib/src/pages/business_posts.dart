@@ -1,9 +1,9 @@
-import 'package:DW/src/app.dart';
+import 'package:TMMA/src/app.dart';
 import 'package:flutter/material.dart';
-// import 'package:dw_app/src/resources/news_api_provider.dart';
-import 'package:DW/src/widgets/post_list.dart';
-// import 'package:dw_app/src/providers/posts_provider.dart';
-import 'package:DW/src/blocs/posts_provider.dart';
+// import 'package:TMMA_app/src/resources/news_api_provider.dart';
+import 'package:TMMA/src/widgets/post_list.dart';
+// import 'package:TMMA_app/src/providers/posts_provider.dart';
+import 'package:TMMA/src/blocs/posts_provider.dart';
 
 class BusinessPosts extends StatelessWidget {
   Widget build(context) {
@@ -15,9 +15,18 @@ class BusinessPosts extends StatelessWidget {
       cats = [137];
     }
 
-    return Flex(
-      children: <Widget>[PostsProvider(child: PostList(cats))],
-      direction: Axis.vertical,
+    return PostsProvider(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Busienss"),
+        ),
+        body: Center(
+          child: Flex(
+            children: <Widget>[PostList(cats)],
+            direction: Axis.vertical,
+          ),
+        ),
+      ),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:DW/src/resources/youtube_api_provider.dart';
-import 'package:DW/src/models/Video.dart';
+import 'package:TMMA/src/resources/youtube_api_provider.dart';
+import 'package:TMMA/src/models/Video.dart';
 
 class Repository {
   YoutubeApiProvider apiProvider = YoutubeApiProvider();

@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:DW/src/models/Video.dart';
+import 'package:TMMA/src/models/Video.dart';
 import 'package:http/http.dart' show Client;
 
 final key = "AIzaSyDM78CQgP4kprm2s770IJo4sg9CmVK4fV8";

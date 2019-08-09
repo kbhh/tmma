@@ -1,4 +1,4 @@
-import 'package:DW/src/models/Video.dart';
+import 'package:TMMA/src/models/Video.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 // import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -31,11 +31,7 @@ class PlayVideoState extends State<PlayVideo> {
         appBar: AppBar(
           title: Padding(
             padding: EdgeInsets.only(top: 5.0, left: 280.0),
-            child: Image(
-              width: 35.0,
-              height: 35.0,
-              image: AssetImage("assets/img/dw_logo1.png"),
-            ),
+            child: Text("ኤመሓት"),
           ),
         ),
         body: Column(

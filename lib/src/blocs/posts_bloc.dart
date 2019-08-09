@@ -1,6 +1,6 @@
-import 'package:DW/src/resources/repository.dart';
+import 'package:TMMA/src/resources/repository.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:DW/src/models/Post.dart';
+import 'package:TMMA/src/models/Post.dart';
 
 class PostsBloc {
   final _repository = Repository();

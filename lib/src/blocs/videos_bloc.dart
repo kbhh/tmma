@@ -1,6 +1,6 @@
-import 'package:DW/src/resources/videos_repository.dart';
+import 'package:TMMA/src/resources/videos_repository.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:DW/src/models/Video.dart';
+import 'package:TMMA/src/models/Video.dart';
 
 class VideosBloc {
   final _repository = Repository();
